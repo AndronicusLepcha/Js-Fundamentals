@@ -29,3 +29,14 @@ const subjects=["CPP","Math","Science"]
 subjects.forEach((item,index,arr) => {
     console.log(item,index,arr)
 });
+
+
+// filter in arrays 
+
+// const myNumbers=[1,2,3,4,5,6,7]
+// const newNumbers=myNumbers.filter((nums)=> nums>2)
+// console.log(newNumbers)
+
+const myNumbers=[1,2,3,4,5,6,7]
+const newNumbers=myNumbers.filter((nums)=> {return nums>2})
+console.log(newNumbers)
