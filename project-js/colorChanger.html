@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Ensure the body takes up the full height of the viewport */
+        body {
+          margin: 0;
+          height: 100vh; /* Full viewport height */
+          display: flex;
+          justify-content: center; /* Center content horizontally */
+          align-items: center; /* Center content vertically */
+          background-color: #f0f0f0; /* Optional background color */
+        }
+      
+        /* Container for the title and buttons */
+        .container {
+          text-align: center; /* Center text and buttons horizontally */
+        }
+      
+        /* Title styling */
+        .title {
+          font-size: 24px; /* Font size for the title */
+          margin-bottom: 20px; /* Space between title and buttons */
+        }
+      
+        /* Container for the buttons */
+        .color-change {
+          display: flex;
+          flex-wrap: wrap; /* Allow buttons to wrap onto the next line if necessary */
+          justify-content: center; /* Center buttons horizontally within the container */
+          align-items: center; /* Center items vertically within the container */
+          gap: 10px; /* Space between buttons */
+        }
+      
+        /* Style for individual buttons */
+        .button {
+          width: 60px; /* Width of the button */
+          height: 60px; /* Height of the button */
+          display: inline-block; /* Display buttons inline */
+          border: 2px solid #000; /* Optional border for better visibility */
+          box-sizing: border-box; /* Include border in width and height */
+          cursor: pointer; /* Pointer cursor on hover */
+          transition: background-color 0.3s ease; /* Smooth transition on color change */
+        }
+      
+        /* Specific colors for each button */
+        #red {
+          background-color: red;
+        }
+      
+        #blue {
+          background-color: blue;
+        }
+      
+        #yellow {
+          background-color: yellow;
+        }
+      
+        #green {
+          background-color: green;
+        }
+      
+        /* Ensuring one button is below the others and centered */
+        .color-change > #yellow {
+          flex-basis: 100%; /* Make yellow button take full width */
+          margin-top: 10px; /* Space between row and centered button */
+        }
+      </style>      
+</head>
+<body>
+    <div class="container">
+      <p class="title">Color Scheme Switcher</p>
+      <div class="color-change">
+        <span class="button" id="red"></span>
+        <span class="button" id="blue"></span>
+        <span class="button" id="yellow"></span>
+        <span class="button" id="green"></span>
+      </div>
+    </div>
+</body>
+<script src="switch-color.js"></script>
+</html>

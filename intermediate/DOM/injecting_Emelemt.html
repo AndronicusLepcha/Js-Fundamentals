@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot</title>
+</head>
+<body>
+    <div class="my-class">
+        <p>Hello, Coder Robot!</p>
+    </div>
+    <div class="languages-sikkim">
+        <ul class="lang">
+            <li>Lepcha</li>
+            <li>Nepali</li>
+            <li>Bhutia</li>
+            <li>Limboo</li>
+        </ul>
+    </div>
+</body>
+<script>
+    const div=document.createElement("div")
+    div.className="my-new-class"
+    div.id="new-class"
+    div.innerText="Hello Androncius"
+    div.setAttribute("title","new-attibute")
+    div.style.background="red"
+
+    document.body.appendChild(div)
+    console.log(div)
+
+
+    // creating a function to add the add language in the list 
+    function langAdd(lang){
+        const li = document.createElement('li')
+        li.innerHTML= lang
+        document.querySelector('.lang').appendChild(li)        
+    }
+
+    langAdd("English")
+    langAdd("Hindi")
+// Add
+    function addOptLanguage(lang){
+        const li=document.createElement('li')
+        <!-- li.innerHTML=lang -->
+        const text=document.createTextNode(lang)
+        li.appendChild(text)
+        document.querySelector('.lang').appendChild(li)        
+    }
+    //addOptLanguage("Japanese")
+
+    // Edit
+    const secondLanguage=document.querySelector('li:nth-child(2)')
+    //secondLanguage.innerHTML="Spanish" 
+    const newli=document.createElement('li')
+    newli.textContent = "Chinese"
+    secondLanguage.replaceWith(newli)
+    console.log(secondLanguage)
+
+    function editLi(newLang,pos){
+        const liToBeChanged=document.querySelector(`li:nth-child(${pos})`)
+        const newli=document.createElement('li')
+        newli.textContent=newLang
+        liToBeChanged.replaceWith(newli)
+    }
+    //editLi("American English",5)
+
+    // Remove 
+
+    function removeElement(pos){
+        //const toRemove =  document.querySelector('li:last-child')
+        const toRemove =  document.querySelector(`li:nth-child(${pos})`)
+        toRemove.remove()
+    }
+    removeElement(3)
+
+
+</script>
+</html>
