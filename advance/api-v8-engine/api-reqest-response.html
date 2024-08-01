@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api request response in XML</title>
+</head>
+<body>
+    <p>XML Api Request Simulation</p>
+</body>
+<script>
+    const url = "https://api.github.com/users/AndronicusLepcha"
+    const xhr = new XMLHttpRequest();
+    //console.log(xhr.readyState)
+    xhr.open('GET',url)
+    xhr.onreadystatechange=function (){
+        console.log(xhr.readyState)
+        if(xhr.readyState==4){
+            const response =JSON.parse(this.responseText)   //this.responseText is of type string 
+            console.log(response)
+            console.log(response.avatar_url)
+        }
+    }
+    
+    xhr.send()
+</script>
+</html>
