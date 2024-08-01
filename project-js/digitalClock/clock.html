@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Clock</title>
+  </head>
+  <style>
+    /* Ensure the body takes up the full height of the viewport */
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Container to center-align the clock and its name */
+    .clock-container {
+      text-align: center;
+    }
+
+    /* Style for the clock */
+    .clock {
+      width: 10rem; /* Adjust width as needed */
+      height: 5rem; /* Adjust height as needed */
+      background-color: black; /* Black background for the clock */
+      color: white; /* Text color inside the clock */
+      display: flex; /* Center contents horizontally and vertically */
+      align-items: center; /* Center vertically */
+      justify-content: center; /* Center horizontally */
+      /* border-radius: 50%;  Make it a circle */
+      font-size: 1.5rem; /* Adjust font size for the clock text */
+      margin-bottom: 5rem; /* Space between clock and clock name */
+    }
+
+    /* Style for the clock name */
+    .clock-name {
+      font-size: 1rem; /* Adjust font size for the clock name */
+    }
+  </style>
+  <body>
+    <div class="clock"></div>
+  </body>
+  <script src="digital.js"></script>
+</html>
