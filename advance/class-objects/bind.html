@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React App</title>
+</head>
+<body>
+    <button id="btn">Button Clicked</button>
+</body>
+<script>
+    class React{
+        constructor(){
+            this.library="React",
+            this.server="https//localhost:3000"
+
+            document.querySelector('#btn')
+            //.addEventListener('click',this.handleClick)     // in this case you are not able to print the library and the server so this is an issue so we use bind
+
+            .addEventListener('click',this.handleClick.bind(this))
+        }
+        handleClick(){
+            console.log("Button Clicked")              
+            console.log(this.library)
+            console.log(this.server)
+        }
+    }
+
+    const app = new React()
+</script>
+</html>

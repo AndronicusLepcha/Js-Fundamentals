@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures && Scoping</title>
+</head>
+<body>
+    <h3>Closures && Scoping</h3>
+</body>
+<script>
+
+    // lexical scoping
+    function outer(){
+        let user="Robot";   
+       //    console.log("This is from outer trying to get the secret ",secret) // this is not allowed 
+        function inner(){
+            let secret="shuuppp!"
+            console.log("user name inner :",user)
+        }
+        function innerTwo(){
+            console.log("This is from another inner function trying to access user name of the parent fun :",user)
+            //console.log("I am from inner function trying to access the secret of another inner function: ",secret) // this is not allowed
+        }
+        inner();
+        innerTwo();
+    }
+    outer()
+    //console.log("To outer:", user)
+
+    // lexical scoping means that the inner function has the access of all the data of the outer function
+
+
+    // Clousre 
+
+    function user(){
+        const name="Andronicus"
+        function displayName(){
+            console.log(name);
+        }
+        return displayName;  // it sends the all the memory not only the displayName function execution context
+    }
+
+    const myname=user();
+    myname();
+</script>
+</html>
